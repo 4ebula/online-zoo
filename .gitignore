@@ -1,15 +1,32 @@
-# Файлы и папки операционной системы
-.DS_Store
-Thumbs.db
+*.*~
+*[-\.]lock.json
 
-# Файлы редактора
-.idea
-*.sublime*
 .vscode
+.vs
+.idea
 
-# Вспомогательные файлы
-*.log*
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
 node_modules/
 
-# Папка с собранными файлами проекта
-dist/
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Build results
+dist
