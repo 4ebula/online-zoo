@@ -72,7 +72,7 @@ module.exports = ({ development }) => ({
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
   ],
   resolve: {
-    extensions: ['.ts', '.js', 'jsx'],
+    extensions: ['.ts', '.js', '.jsx'],
   },
   ...devServer(development)
 });

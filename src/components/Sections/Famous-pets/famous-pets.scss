@@ -1,3 +1,7 @@
+@import '../../variables.scss';
+@import '../../typography.scss';
+@import '../../buttons.scss';
+
 .famous-pets {
   margin-top: 108px;
   display: flex;
@@ -295,7 +299,7 @@
     left: 73px;
     width: 22px;
     height: 15px;
-    background-image: url("assets/images/arrow-follow.png");
+    // background-image: url("./assets/images/arrow-follow.png");
     background-repeat: no-repeat;
     background-size: 22px 15px;
   }
