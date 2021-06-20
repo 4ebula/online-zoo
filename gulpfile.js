@@ -14,6 +14,7 @@ const fileinclude = require('gulp-file-include');
 
 // COMPILE SCSS INTO CSS
 function style() {
+  sassImport();
   return gulp.src('./src/scss/style.scss')
     /* .pipe(concat('style.scss'))*/
     .pipe(sass())
@@ -30,7 +31,7 @@ function style() {
       format: 'beautify',
     }))
     .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.stream());
+    // .pipe(browserSync.stream());
 }
 
 // LIVE UPDATE
@@ -42,19 +43,19 @@ function watch() {
     port: 8081,
     notify: false,
   });
-  gulp.watch('./src/**/*.scss', style);
+  gulp.watch(['./src/**/*.scss', '!./src/scss/style.scss'], style).on('change', browserSync.reload);
   gulp.watch('./src/**/*.html').on('change', async () => {
     await includeHTML();
     browserSync.reload();
   });
   gulp.watch('./src/js/**/*.js').on('change', browserSync.reload);
-  gulp.watch('src/images/**/*', images);
+  gulp.watch('src/assets/**/*', images);
 }
 
 function images() {
-  return gulp.src('./src/images/**/*')
+  return gulp.src('./src/assets/**/*')
     .pipe(cache(imagemin()))
-    .pipe(gulp.dest('./dist/images/'));
+    .pipe(gulp.dest('./dist/assets/'));
 }
 
 function sassImport() {
@@ -73,7 +74,7 @@ function buildCopy() {
   return gulp.src([
     './src/*.css',
     './src/js/**/*.js',
-    './src/images/**/*',
+    './src/assets/**/*',
     './src/**/*.html',
   ], { base: 'src' })
     .pipe(gulp.dest('./dist/'));
@@ -87,6 +88,7 @@ async function includeHTML() {
       prefix: '@@',
       basepath: '@file'
     }))
+    .on('error', (err) => console.log(err))
     .pipe(gulp.dest('./dist/'));
 }
 
@@ -95,9 +97,9 @@ exports.images = images;
 exports.includeHTML = includeHTML;
 
 exports.watch = async () => {
-  cleandist();
+  // cleandist();
   await includeHTML();
-  sassImport();
+  // sassImport();
   style();
   images();
   watch();
@@ -106,7 +108,6 @@ exports.watch = async () => {
 exports.build = async () => {
   cleandist();
   await includeHTML();
-  sassImport();
   style();
   images();
 };

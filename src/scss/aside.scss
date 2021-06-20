@@ -1,0 +1,203 @@
+
+.aside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+}
+
+.remaining {
+  flex: 1 0 184px;
+  z-index: -100;
+  height: 1px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  top: -2px;
+  left: -2px;
+  background-color: #fcfcfc05;
+  border-bottom: 2px solid #f0f0f0;
+
+  img {
+    width: 51.87px;
+    height: 40px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 25px;
+  left: -2px;
+  flex-grow: 0;
+  width: 90px;
+  height: 680px;
+  margin-bottom: 20px;
+  border: 2px solid #f0f0f0;
+  background-color: $white;
+  visibility: visible;
+}
+
+@media screen and (max-width: 1919px) {
+  .sidebar {
+    width: 70px;
+    height: 585px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 41.87px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .aside {
+    display: none;
+  }
+}
+
+.social-icons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 190px;
+  margin-top: 240px;
+}
+
+.social-icons__item {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $white;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+  }
+
+  object {
+    width: 22px;
+    height: 24px;
+  }
+}
+
+.facebook,
+.instagram,
+.twitter {
+  path {
+    fill: $dark-blue;
+  }
+}
+
+.social-icons__item:hover {
+  a {
+    border-color: $dark-blue;
+    transform: scale(1.15);
+    transition: all 500ms;
+  }
+
+  object {
+    //transform: scale(1.15);
+    transition: all 500ms;
+  }
+}
+
+.social-icons__item:active {
+  a {
+    border-color: $active;
+  }
+
+  object {
+    //transform: scale(1.15);
+    transition: all 500ms;
+  }
+
+  .facebook,
+  .instagram,
+  .twitter {
+    path {
+      fill: $active;
+    }
+  }
+}
+
+.btn-up {
+  margin-top: 90px;
+  margin-left: 19px;
+  width: 48px;
+  height: 48px;
+  background-color: $white;
+  border-color: #f0f0f0;
+
+  &:hover {
+    background-color: $white;
+    border-color: $blue;
+
+    svg path {
+      fill: $blue;
+    }
+  }
+
+  &:active {
+    background-color: $white;
+    border-color: $hard-blue;
+
+    svg path {
+      fill: $hard-blue;
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .social-icons {
+    height: 144px;
+    margin-top: 197px;
+  }
+
+  .social-icons__item {
+    width: 20px;
+    height: 20px;
+
+    object {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .btn-up {
+    margin-top: 68px;
+    margin-left: 10px;
+    width: 48px;
+    height: 48px;
+  }
+}
