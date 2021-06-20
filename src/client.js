@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import { Header } from './components/Header/header';
-import { Aside } from './components/Aside/aside';
+import { Aside } from './components/Aside/aside.jsx';
 
 require('./style.scss')
 

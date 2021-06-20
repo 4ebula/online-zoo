@@ -51,7 +51,7 @@ module.exports = ({ development }) => ({
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
-        test: /\.js?$/,
+        test: /\.js(x)?$/,
         exclude: /(node_modules|bower_components)/,
         use: 'babel-loader',
       }
