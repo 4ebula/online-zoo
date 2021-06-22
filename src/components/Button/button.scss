@@ -1,0 +1,125 @@
+@import '../variables.scss';
+@import '../typography.scss';
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 261px;
+  height: 61px;
+
+  border: {
+    width: 2px;
+    style: solid;
+    radius: 5px;
+  }
+  
+  @include typography(18, 500, 21.33, "Rubik", $white);
+  outline: none;
+
+  &::-moz-focus-inner {
+    border: none;
+  }
+
+  &__filled {
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+    color: $white;
+
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $active;
+      border-color: $active;
+      color: $white;
+    }
+  }
+
+  &__hollow {
+    background-color: $white;
+    border-color: $dark-blue;
+    color: $dark-blue;
+
+    object svg path {
+      fill: $blue;
+    }
+
+    &:hover {
+      background-color: $white;
+      border-color: $blue;
+      color: $dark-blue;
+    }
+
+    &:active {
+      background-color: $white;
+      border-color: $hard-blue;
+      color: $dark-blue;
+
+    }
+  }
+
+  &-round {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 1px solid $dark-blue;
+    background-color: $dark-blue;
+    outline: none;
+
+    &::-moz-focus-inner {
+      border: none;
+    }
+
+    &:hover {
+      border: 1px solid $blue;
+      background-color: $blue;
+
+      svg path {
+        fill: $blue;
+      }
+    }
+
+    &:active {
+      border: 1px solid $active;
+      background-color: $active;
+      
+      svg path {
+        fill: $active;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1919px) {
+  .btn {
+    width: 219px;
+    height: 51px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .btn {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+
+object {
+  display: inline;
+  width: fit-content;
+}
