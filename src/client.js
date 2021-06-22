@@ -16,7 +16,7 @@ require('./style.scss')
 class MainContent extends React.Component {
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <Aside />
         <Header />
         <About />

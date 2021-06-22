@@ -21,13 +21,13 @@ export class About extends React.Component {
               <div className="button-holder">
                 <button
                   className="btn btn__filled"
-                  onClick="window.location='pages/map/map.html'"
+                  onClick={() => window.location='pages/map/map.html'}
                 >
                   Choose zoo
                 </button>
                 <button
                   className="btn btn__hollow"
-                  onClick="window.location='pages/zoos/panda.html'"
+                  onClick={() => window.location='pages/zoos/panda.html'}
                 >
                   Watch online
                 </button>
