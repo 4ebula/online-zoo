@@ -1,3 +1,7 @@
+@import '../../variables.scss';
+@import '../../typography.scss';
+@import '../../buttons.scss';
+
 .reviews {
   margin-top: 116px;
   display: flex;
@@ -181,11 +185,11 @@
   }
 
   &:nth-child(1) h4::before {
-    background-image: url("assets/images/avatar-1.png");
+    background-image: url("../../../assets/images/avatar-1.png");
   }
 
   &:nth-child(2) h4::before {
-    background-image: url("assets/images/avatar-2.png");
+    background-image: url("../../../assets/images/avatar-2.png");
   }
 
   h4 {

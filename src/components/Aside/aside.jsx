@@ -6,28 +6,28 @@ require('./aside.scss');
 export class Aside extends React.Component {
   render() {
     return (
-      <aside class="aside">
-        <div class="wrapper">
-          <div class="sidebar">
-            <div class="logo">
+      <aside className="aside">
+        <div className="wrapper">
+          <div className="sidebar">
+            <div className="logo">
               <a href="#about"></a>
-              <img src="assets/images/logo.svg" alt="logo" />
+              <img src={require("../../assets/images/logo.svg")} alt="logo" />
             </div>
-            <ul class="social-icons">
-              <li class="social-icons__item">
-                <object data="assets/images/social-instagram.svg" type="image/svg+xml"></object>
+            <ul className="social-icons">
+              <li className="social-icons__item">
+                <object data={require("../../assets/images/social-instagram.svg")} type="image/svg+xml"></object>
                 <a href="https://instagram.com" target="_blank"></a>
               </li>
-              <li class="social-icons__item">
-                <object data="assets/images/social-facebook.svg" type="image/svg+xml"></object>
+              <li className="social-icons__item">
+                <object data={require("../../assets/images/social-facebook.svg")} type="image/svg+xml"></object>
                 <a href="https://facebook.com" target="_blank"></a>
               </li>
-              <li class="social-icons__item">
-                <object data="assets/images/social-twitter.svg" type="image/svg+xml"></object>
+              <li className="social-icons__item">
+                <object data={require("../../assets/images/social-twitter.svg")} type="image/svg+xml"></object>
                 <a href="https://twitter.com" target="_blank"></a>
               </li>
             </ul>
-            <button class="btn btn-round btn-up">
+            <button className="btn btn-round btn-up">
               <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.70711 0.292892C8.31658 -0.0976314   
           7.68342 -0.0976315 7.29289 0.292892L0.928933 
@@ -41,7 +41,7 @@ export class Aside extends React.Component {
               </svg>
             </button>
           </div>
-          <div class="remaining"></div>
+          <div className="remaining"></div>
         </div>
       </aside>
     );

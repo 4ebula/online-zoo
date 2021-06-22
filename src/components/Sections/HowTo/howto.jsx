@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
 
-require("./howto.scss");
+require('./howto.scss');
 
 export class Howto extends React.Component {
   render() {
@@ -10,7 +9,7 @@ export class Howto extends React.Component {
         <div class="wrapper">
           <div class="wrapper-inner">
             <div class="howto-image">
-              <img src="assets/images/lion.jpg" alt="Lion"/>
+              <img src={require("../../../assets/images/lion.jpg")} alt="Lion"/>
             </div>
             <div class="howto-info">
               <h2>How Zoo online works</h2>
