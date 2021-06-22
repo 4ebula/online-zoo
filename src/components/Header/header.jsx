@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Logo } from '../Logo/logo';
 
 require('./header.scss');
 
@@ -8,12 +9,7 @@ export class Header extends React.Component {
       <header className="header">
         <div className="wrapper">
           <div className="header-main">
-            <div className="logo-container">
-              <div className="logo">
-                <a href="#about"></a>
-                <img src={require("../../assets/images/logo.svg")} alt="logo"/>
-              </div>
-            </div>
+            <Logo />
             <nav>
               <ul>
                 <li className="active"><a href="">About</a></li>
