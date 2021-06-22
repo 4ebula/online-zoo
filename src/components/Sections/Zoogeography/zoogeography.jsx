@@ -1,23 +1,23 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-require("./zoogeography.scss");
+require('./zoogeography.scss');
 
 export class Zoogeography extends React.Component {
   render() {
     return (
-      <section class="zoogeography" id="zoogeography">
-        <div class="wrapper">
-          <div class="wrapper-inner_one-side">
-            <div class="zoogeography-container">
+      <section className="zoogeography" id="zoogeography">
+        <div className="wrapper">
+          <div className="wrapper-inner_one-side">
+            <div className="zoogeography-container">
               <h2>Zoogeography</h2>
-              <div class="zoogeography-card__container">
-                <div class="zoogeography-card" data-animal="eagle">
-                  <div class="zoogeography-card__image">
-                    <img src="../../../assets/images/card-eagle.jpg" alt="Eagle" style={{objectPosition: [0, 0]}} />
+              <div className="zoogeography-card__container">
+                <div className="zoogeography-card" data-animal="eagle">
+                  <div className="zoogeography-card__image">
+                    <img src={require("../../../assets/images/card-eagle.jpg")} alt="Eagle" style={{objectPosition: [0, 0]}} />
                   </div>
                   <h3>Eagle</h3>
                   <p>The broadcast is from an island near&nbsp;Los Angeles. Watch their real life.</p>
-                  <button class="btn" onclick="window.location='pages/zoos/eagle.html'">
+                  <button className="btn" onClick={() => window.location='pages/zoos/eagle.html'}>
                     <span>Watch now</span>
                     <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21.601 7.10104C21.933 6.7691 21.933 6.23091 21.601 5.89896L16.1917 
@@ -29,15 +29,15 @@ export class Zoogeography extends React.Component {
                     </svg>
                   </button>
                 </div>
-                <div class="zoogeography-card" data-animal="gorilla">
-                  <div class="zoogeography-card__image">
-                    <img src="../../../assets/images/card-gorilla.jpg" alt="Gorilla" style={{ objectPosition: ['0%', '20%']}} />
+                <div className="zoogeography-card" data-animal="gorilla">
+                  <div className="zoogeography-card__image">
+                    <img src={require("../../../assets/images/card-gorilla.jpg")} alt="Gorilla" style={{ objectPosition: ['0%', '20%']}} />
                   </div>
                   <h3>Gorilla</h3>
                   <p>The broadcast comes from the Democratic Republic of the Congo in a forest area.
                     Watch their life and their life together
                   </p>
-                  <button class="btn" onclick="window.location='pages/zoos/gorilla.html'">
+                  <button className="btn" onClick={() => window.location='pages/zoos/gorilla.html'}>
                     <span>Watch now</span>
                     <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21.601 7.10104C21.933 6.7691 21.933 6.23091 21.601 5.89896L16.1917 
@@ -49,13 +49,13 @@ export class Zoogeography extends React.Component {
                     </svg>
                   </button>
                 </div>
-                <div class="zoogeography-card" data-animal="alligator">
-                  <div class="zoogeography-card__image">
-                    <img src="../../../assets/images/card-alligator.jpg" alt="Alligator" />
+                <div className="zoogeography-card" data-animal="alligator">
+                  <div className="zoogeography-card__image">
+                    <img src={require("../../../assets/images/card-alligator.jpg")} alt="Alligator" />
                   </div>
                   <h3>Alligator</h3>
                   <p>The broadcast is from Florida. See their real life</p>
-                  <button class="btn" onclick="window.location='pages/zoos/alligator.html'">
+                  <button className="btn" onClick={() => window.location='pages/zoos/alligator.html'}>
                     <span>Watch now</span>
                     <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21.601 7.10104C21.933 6.7691 21.933 6.23091 21.601 5.89896L16.1917 
@@ -67,15 +67,15 @@ export class Zoogeography extends React.Component {
                     </svg>
                   </button>
                 </div>
-                <div class="zoogeography-card" data-animal="panda">
-                  <div class="zoogeography-card__image">
-                    <img src="../../../assets/images/card-panda.jpg" alt="Panda" />
+                <div className="zoogeography-card" data-animal="panda">
+                  <div className="zoogeography-card__image">
+                    <img src={require("../../../assets/images/card-panda.jpg")} alt="Panda" />
                   </div>
                   <h3>Panda</h3>
                   <p>The broadcast comes from the mountainous regions of central China: Sichuan
                     and Tibet. See their real life together.
                   </p>
-                  <button class="btn" onclick="window.location='pages/zoos/panda.html'">
+                  <button className="btn" onClick={() => window.location='pages/zoos/panda.html'}>
                     <span>Watch now</span>
                     <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21.601 7.10104C21.933 6.7691 21.933 6.23091 21.601 5.89896L16.1917 
@@ -90,15 +90,15 @@ export class Zoogeography extends React.Component {
               </div>
 
             </div>
-            <div class="zoogeography-map-container">
-              <div class="zoogeography-map">
-                <object class="marker-eagle marker-active" data="../../../assets/images/icons/marker-eagle.svg"
+            <div className="zoogeography-map-container">
+              <div className="zoogeography-map">
+                <object className="marker-eagle marker-active" data={require("../../../assets/icons/marker-eagle.svg")}
                   type="image/svg+xml" data-animal="eagle"></object>
-                <object class="marker-panda" data="../../../assets/images/icons/marker-panda.svg" type="image/svg+xml"
+                <object className="marker-panda" data={require("../../../assets/icons/marker-panda.svg")} type="image/svg+xml"
                   data-animal="panda"></object>
-                <object class="marker-gorilla" data="../../../assets/images/icons/marker-gorilla.svg" type="image/svg+xml"
+                <object className="marker-gorilla" data={require("../../../assets/icons/marker-gorilla.svg")} type="image/svg+xml"
                   data-animal="gorilla"></object>
-                <object class="marker-alligator" data="../../../assets/images/icons/marker-alligator.svg" type="image/svg+xml"
+                <object className="marker-alligator" data={require("../../../assets/icons/marker-alligator.svg")} type="image/svg+xml"
                   data-animal="aligator"></object>
               </div>
             </div>

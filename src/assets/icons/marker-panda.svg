@@ -19,7 +19,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
 <style>
-@import url("../../../style.css")
+@import url("../../main.css")
 </style>
 </defs>
 </svg>
