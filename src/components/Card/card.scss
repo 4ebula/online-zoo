@@ -1,0 +1,148 @@
+@import '../variables.scss';
+@import '../typography.scss';
+
+
+.zoogeography-card {
+  height: 512px;
+  position: absolute;
+  left: -500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fcfcfc;
+  transition: left 200ms;
+
+  h3 {
+    text-transform: capitalize;
+    margin-top: 21px;
+  }
+
+  p {
+    margin-top: 19px;
+    text-align: center;
+    width: 80%;
+  }
+
+  &__image {
+    height: 216px;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .btn {
+    @include button-text($hard-blue, $blue, $active);
+    margin-top: 41px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .zoogeography-card {
+    height: 448px;
+    width: 292px;
+
+    h3 {
+      margin-top: 19px;
+    }
+
+    p {
+      margin-top: 17px;
+      width: 90%;
+    }
+
+    &__image {
+      height: 195px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &  .btn {
+      font-size: 16px;
+      margin-bottom: 0px;
+      margin-top: 28px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .zoogeography-card {
+    width: 250px;
+    height: 390px;
+    z-index: 5;
+
+    h3 {
+      margin-top: 19px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 21px;
+      width: 90%;
+    }
+
+    &__image {
+      height: 160px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & .btn {
+      font-size: 16px;
+      margin-bottom: 0px;
+      margin-top: 23px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .zoogeography-card {
+    width: 250px;
+    height: 374px;
+    z-index: 5;
+
+    h3 {
+      margin-top: 21px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 15px;
+      width: 85%;
+    }
+
+    &__image {
+      height: 160px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & .btn {
+      font-size: 14px;
+      margin-bottom: 0px;
+      margin-top: 18px;
+      margin-left: 6px;
+    }
+  }
+}
+
+.card-active {
+  left: 0;
+}
