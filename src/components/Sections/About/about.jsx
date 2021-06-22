@@ -1,41 +1,40 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
 
-require("./about.scss");
+require('./about.scss');
 
 export class About extends React.Component {
   render() {
     return (
-      <section class="about" id="about">
-        <div class="wrapper">
-          <div class="wrapper-inner">
-            <div class="about-info">
-              <h1 class="visually-hidden">Online Zoo</h1>
-              <h2 class="tag">Wild park</h2>
-              <h3 class="tagline">Watch your favorite animal onl
+      <section className="about" id="about">
+        <div className="wrapper">
+          <div className="wrapper-inner">
+            <div className="about-info">
+              <h1 className="visually-hidden">Online Zoo</h1>
+              <h2 className="tag">Wild park</h2>
+              <h3 className="tagline">Watch your favorite animal onl
                 <span>
                   <span>ı</span>
-                  <span class="dot">.</span>
+                  <span className="dot">.</span>
                 </span>
                 ne
               </h3>
-              <div class="button-holder">
+              <div className="button-holder">
                 <button
-                  class="btn btn__filled"
-                  onclick="window.location='pages/map/map.html'"
+                  className="btn btn__filled"
+                  onClick="window.location='pages/map/map.html'"
                 >
                   Choose zoo
                 </button>
                 <button
-                  class="btn btn__hollow"
-                  onclick="window.location='pages/zoos/panda.html'"
+                  className="btn btn__hollow"
+                  onClick="window.location='pages/zoos/panda.html'"
                 >
                   Watch online
                 </button>
               </div>
             </div>
-            <div class="about-image">
-              <img src="assets/images/panda.jpg" alt="Panda" />
+            <div className="about-image">
+              <img src={require("../../../assets/images/panda.jpg")} alt="Panda" />
             </div>
           </div>
         </div>
