@@ -5,24 +5,24 @@ require('./footer.scss');
 export class Footer extends React.Component {
   render() {
     return (
-      <footer class="footer">
-        <div class="wrapper">
-          <div class="wrapper-inner">
-            <div class="footer-main">
-              <div class="footer-main_logos">
+      <footer className="footer">
+        <div className="wrapper">
+          <div className="wrapper-inner">
+            <div className="footer-main">
+              <div className="footer-main_logos">
                 <div>
-                  <img src="assets/images/logo-big.svg" alt="" />
+                  <img src={require("../../assets/logo.svg")} alt="" />
                   <a href="#about"></a>
                 </div>
-                <div class="side-logos">
-                  <img src="assets/images/logo-yem.svg" alt="" title="Yem Digital" />
-                  <span class="footer-logos-text">x</span>
-                  <img src="assets/images/logo-RS.svg" alt="" title="RS School" />
+                <div className="side-logos">
+                  <img src={require("../../assets/images/logo-yem.svg")} alt="" title="Yem Digital" />
+                  <span className="footer-logos-text">x</span>
+                  <img src={require("../../assets/images/logo-RS.svg")} alt="" title="RS School" />
                 </div>
               </div>
-              <div class="footer-main_nav">
+              <div className="footer-main_nav">
                 <h2>Navigation</h2>
-                <nav class="footer-nav">
+                <nav className="footer-nav">
                   <ul>
                     <li><a href="#about">Watch online</a></li>
                     <li><a href="#howto">How it works</a></li>
@@ -33,19 +33,19 @@ export class Footer extends React.Component {
                   </ul>
                 </nav>
               </div>
-              <div class="footer-main_donate">
+              <div className="footer-main_donate">
                 <h2>Support of volunteers</h2>
                 <p>You can thank the volunteers for theit work. For example,
                   caring for animals and sincere love for them.</p>
-                <button class="btn btn-donate">Donate for volunteers</button>
-                <ul class="social">
+                <button className="btn btn-donate">Donate for volunteers</button>
+                <ul className="social">
                   <li><a href="https://instagram.com">Instagram</a></li>
                   <li><a href="https://facebook.com">Facebook</a></li>
                   <li><a href="https://twitter.com">Twitter</a></li>
                 </ul>
               </div>
             </div>
-            <div class="footer-row">
+            <div className="footer-row">
               <p>Copyright &copy;RSSchool and &copy;Yem Digital 2020 - 2021</p>
               <p>Designed by Vladislav Chernov</p>
             </div>
