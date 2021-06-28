@@ -27,8 +27,8 @@ export class Logo extends React.Component {
       <div className="logo-container">
         <div className="logo">
           <a href="#about"></a>
-          {/* <img src={require("../../assets/logo.svg")} alt="logo" /> */}
-          {this.logo}
+          {<img src={require("../../assets/logo.svg")} alt="logo" />}
+          {/* {this.logo} */}
         </div>
       </div>
     );
