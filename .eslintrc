@@ -6,6 +6,7 @@
   "extends": [
     "airbnb-typescript/base",
     "eslint:recommended",
+    "plugin:import/react",
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -17,6 +18,8 @@
   ],
   "rules": {
     "no-plusplus": "off",
+    "class-methods-use-this": "off",
+    "linebreak-style": "off",
     "no-console": "warn",
     "max-len": ["warn", { "code": 120 }],
     "indent": ["warn", 2, {
@@ -29,5 +32,12 @@
     "no-param-reassign": ["error", {
       "props": false
     }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx"]
+       }
+    }
   }
 }

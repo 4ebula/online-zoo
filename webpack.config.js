@@ -30,10 +30,15 @@ module.exports = ({ development }) => ({
   module: {
     rules: [
       {
-        test: /\.[tj]s$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+        test: /\.js(x)?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: 'babel-loader' ,
       },
+      // {
+      //   test: /\.[tj]s$/,
+      //   use: 'ts-loader',
+      //   exclude: /node_modules/,
+      // },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource',
@@ -50,18 +55,13 @@ module.exports = ({ development }) => ({
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
-      {
-        test: /\.js(x)?$/,
-        exclude: /(node_modules|bower_components)/,
-        use: 'babel-loader',
-      }
     ],
   },
   plugins: [
     ...esLintPlugin(development),
     new MiniCssExtractPlugin({ filename: '[name].css' }),
     new HtmlWebpackPlugin({
-      title: "Application name",
+      title: "Online zoo",
       template: './src/index.html',
     }),
     new CopyPlugin({
@@ -72,7 +72,7 @@ module.exports = ({ development }) => ({
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
   ],
   resolve: {
-    extensions: ['.ts', '.js', '.jsx'],
+    extensions: ['.ts', '.js', '.tsx', '.jsx'],
   },
   ...devServer(development)
 });
