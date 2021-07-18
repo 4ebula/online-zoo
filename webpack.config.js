@@ -20,10 +20,10 @@ module.exports = ({ development }) => ({
   mode: development ? 'development' : 'production',
   devtool: development ? 'inline-source-map' : false,
   entry: {
-    main: './src/client.js',
+    main: './src/index.js',
   },
   output: {
-    filename: 'client.min.js',
+    filename: 'index.min.js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext]',
   },

@@ -13,31 +13,22 @@ import { Footer } from './components/Footer/footer';
 
 require('./style.scss');
 
-/* eslint max-classes-per-file: ["error", 2] */
-class MainContent extends React.Component {
-  render() {
-    return (
-      <div className="container">
-        <Aside />
-        <Header />
-        <About />
-        <Howto />
-        <FamousPets />
-        <Payment />
-        <Reviews />
-        <Zoogeography />
-      </div>
-    );
-  }
-}
-
 class Page extends React.Component {
   render() {
     return (
-      <div className="container">
-        <MainContent />
+      <React.Fragment>
+        <div className="container">
+          <Aside />
+          <Header />
+          <About />
+          <Howto />
+          <FamousPets />
+          <Payment />
+          <Reviews />
+          <Zoogeography />
+        </div>
         <Footer />
-      </div>
+      </React.Fragment>
     );
   }
 }
