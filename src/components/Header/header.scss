@@ -1,13 +1,13 @@
-@import '../variables.scss';
-@import '../typography.scss';
-@import '../buttons.scss';
+@import "../variables.scss";
+@import "../typography.scss";
+@import "../buttons.scss";
 
 .header {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 90px;
+  height: 92px;
   border-bottom: none;
 
   nav ul {
@@ -34,12 +34,21 @@
       color: $active;
     }
   }
+
+  .logo {
+    width: 90px;
+    border-right: 2px solid #f0f0f0;
+  }
 }
 
 @media screen and (max-width: 1919px) {
   .header {
     position: relative;
-    height: 70px;
+    height: 72px;
+
+    .logo {
+      width: 70px;
+    }
   }
 }
 
@@ -51,6 +60,10 @@
     background-color: $white;
     z-index: 10;
     border-bottom: 2px solid #f0f0f0;
+
+    .logo {
+      border-right: none;
+    }
   }
 }
 
@@ -111,11 +124,8 @@
   }
 }
 
-
-
 @media screen and (max-width: 1919px) {
   .header-main {
-
     nav {
       flex: 4 0 136.25px;
       margin-right: auto;

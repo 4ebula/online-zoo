@@ -34,7 +34,7 @@ class MainContent extends React.Component {
 class App extends React.Component {
   render() {
     return (
-      <div id="app">
+      <div className="container">
         <MainContent />
         <Footer />
       </div>
@@ -42,5 +42,4 @@ class App extends React.Component {
   }
 }
 
-const app = document.getElementById('app');
-render(<App />, app);
+render(<App />, document.body);
