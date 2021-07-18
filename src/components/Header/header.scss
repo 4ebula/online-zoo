@@ -1,6 +1,6 @@
 @import "../variables.scss";
 @import "../typography.scss";
-@import "../buttons.scss";
+@import '../Button/button.scss';
 
 .header {
   position: relative;
@@ -188,32 +188,6 @@
   }
 }
 
-.btn-login {
-  position: relative;
-  width: 52px;
-  height: 52px;
-  background-color: $dark-blue;
-  border-color: $dark-blue;
-  border-radius: 50%;
-  cursor: pointer;
-
-  object {
-    width: 26px;
-    height: 33px;
-    cursor: pointer;
-  }
-
-  &:hover {
-    background-color: $blue;
-    border-color: $blue;
-  }
-
-  &:active {
-    background-color: $active;
-    border-color: $active;
-  }
-}
-
 .icon-login {
   circle {
     stroke: $white;
@@ -225,15 +199,3 @@
   }
 }
 
-@media screen and (max-width: 1919px) {
-  .btn-login {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .btn-login {
-    visibility: hidden;
-  }
-}

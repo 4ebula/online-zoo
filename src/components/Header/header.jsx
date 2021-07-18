@@ -1,3 +1,4 @@
+import { Button } from '../Button/button';
 import React, { Component } from 'react';
 import { Logo } from '../Logo/logo';
 
@@ -21,9 +22,10 @@ export class Header extends React.Component {
               </ul>
             </nav>
             <div className="login">
-              <button className="btn btn-login">
+              {/* <button className="btn btn-login">
                 <object data={require("../../assets/images/icon-login.svg")} type="image/svg+xml"></object>
-              </button>
+              </button> */}
+              <Button classes = {['btn_round', 'btn_login']}/>
             </div>
             <div className="burger"><img src={require("../../assets/images/icons/icon-burger.svg")} alt=""/></div>
           </div>

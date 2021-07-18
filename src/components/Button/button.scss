@@ -16,6 +16,7 @@
   
   @include typography(18, 500, 21.33, "Rubik", $white);
   outline: none;
+  cursor: pointer;
 
   &::-moz-focus-inner {
     border: none;
@@ -96,10 +97,10 @@
       }
     }
   }
-}
 
-.btn_round {
-  border-radius: 50%;
+  &_round {
+    border-radius: 50%;
+  }
 }
 
 @media screen and (max-width: 1919px) {
@@ -122,7 +123,39 @@
   }
 }
 
-object {
-  display: inline;
-  width: fit-content;
+.btn_login {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background-color: $dark-blue;
+  border-color: $dark-blue;
+
+  object {
+    width: 26px;
+    height: 33px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $blue;
+    border-color: $blue;
+  }
+
+  &:active {
+    background-color: $active;
+    border-color: $active;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .btn_login {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .btn_login {
+    visibility: hidden;
+  }
 }
