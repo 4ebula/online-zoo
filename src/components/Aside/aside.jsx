@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { Logo } from '../Logo/logo';
 
 require('./aside.scss');
 
@@ -9,10 +10,7 @@ export class Aside extends React.Component {
       <aside className="aside">
         <div className="wrapper">
           <div className="sidebar">
-            <div className="logo">
-              <a href="#about"></a>
-              <img src={require("../../assets/images/logo.svg")} alt="logo" />
-            </div>
+            <Logo />
             <ul className="social-icons">
               <li className="social-icons__item">
                 <object data={require("../../assets/images/social-instagram.svg")} type="image/svg+xml"></object>

@@ -12,7 +12,7 @@ export class Header extends React.Component {
             <Logo />
             <nav>
               <ul>
-                <li className="active"><a href="">About</a></li>
+                <li className="active"><a>About</a></li>
                 <li><a href="pages/map/map.html">Map</a></li>
                 <li><a href="pages/zoos/panda.html">Zoos</a></li>
                 <li><a href="pages/404/404.html">Contact us</a></li>

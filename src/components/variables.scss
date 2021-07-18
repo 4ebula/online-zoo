@@ -20,6 +20,12 @@ $gray: #747474;
   color: $color;
 }
 
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin button-text($color, $hover, $active) {
   height: 50px;
   background-color: transparent;

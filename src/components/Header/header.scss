@@ -34,10 +34,6 @@
       color: $active;
     }
   }
-
-  .logo img {
-    visibility: hidden;
-  }
 }
 
 @media screen and (max-width: 1919px) {
@@ -115,16 +111,10 @@
   }
 }
 
-.logo-container {
-  flex: 0 0 184px;
-  height: 100%;
-}
+
 
 @media screen and (max-width: 1919px) {
   .header-main {
-    .logo-container {
-      flex: 0 0 143.25px;
-    }
 
     nav {
       flex: 4 0 136.25px;
@@ -188,19 +178,6 @@
   }
 }
 
-.logo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: {
-    left-color: transparent;
-    //bottom-color: transparent;
-    top-color: transparent;
-  }
-}
-
 .btn-login {
   position: relative;
   width: 52px;
@@ -246,29 +223,7 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .logo-container .logo {
-    margin-top: 19px;
-    width: 50px;
-    height: 50px;
-    border-bottom-color: transparent;
-  }
-
-  .logo-container .logo img {
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
   .btn-login {
     visibility: hidden;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .logo-container .logo {
-    margin-top: 12px;
-    width: 38px;
-    height: 38px;
   }
 }
