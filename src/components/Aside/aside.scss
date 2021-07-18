@@ -1,6 +1,5 @@
 @import '../variables.scss';
 @import '../typography.scss';
-@import '../Button/button.scss';
 
 .aside {
   position: absolute;
@@ -123,11 +122,9 @@
   }
 }
 
-.btn-up {
+.aside .btn-up {
   margin-top: 90px;
   margin-left: 19px;
-  width: 48px!important;
-  height: 48px!important;
   background-color: $white;
   border-color: #f0f0f0;
 
@@ -169,8 +166,6 @@
   .btn-up {
     margin-top: 68px;
     margin-left: 10px;
-    width: 48px;
-    height: 48px;
   }
 }
 

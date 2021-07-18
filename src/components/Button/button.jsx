@@ -1,6 +1,7 @@
 import React from 'react';
 import { paths } from './paths';
 import User from './icons/user.svg';
+import ArrowUp from './icons/arrow-up.svg';
 
 require('./button.scss');
 require('./icons/icon.scss');
@@ -16,21 +17,24 @@ export class Button extends React.Component {
   }
   
   setClasses() {
-    const classes = ['btn']
-      .concat(this.props.classes.map((e) => 'btn_' + e)).join(' ');
-    return classes;
+    let classes = ['btn'];
+    if (this.props.classes)
+      classes = classes.concat(this.props.classes.map((e) => 'btn_' + e));
+    return classes.join(' ');
   }
 
   setSvg() {
     switch (this.props.iconName) {
       case 'user': return User;        
         break;
+      case 'arrowUp': return ArrowUp;
+        break;
       default: break;
     }
   }
 
   setAction() {
-    return console.log('Hello');
+    console.log('Hello');
   }
 
   render() {

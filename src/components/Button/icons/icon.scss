@@ -1,12 +1,22 @@
+@import '../../variables.scss';
+
 .icon_login {
   cursor: pointer;
-  
+
   circle {
-    stroke: #ffffff;
+    stroke: $white;
     fill: transparent;
     cursor: pointer;
   }
   path {
-    fill: #ffffff;
+    fill: $white;
+  }
+}
+
+.icon_arrow {
+  cursor: pointer;
+
+  path {
+    fill: $blue;
   }
 }

@@ -1,5 +1,5 @@
-@import '../variables.scss';
-@import '../typography.scss';
+@import "../variables.scss";
+@import "../typography.scss";
 
 .btn {
   display: flex;
@@ -13,7 +13,7 @@
     style: solid;
     radius: 5px;
   }
-  
+
   @include typography(18, 500, 21.33, "Rubik", $white);
   outline: none;
   cursor: pointer;
@@ -44,8 +44,6 @@
     }
   }
 
-  
-
   &__hollow {
     background-color: $white;
     border-color: $dark-blue;
@@ -65,7 +63,6 @@
       background-color: $white;
       border-color: $hard-blue;
       color: $dark-blue;
-
     }
   }
 
@@ -97,7 +94,7 @@
     &:active {
       border: 1px solid $active;
       background-color: $active;
-      
+
       svg path {
         fill: $active;
       }
@@ -122,6 +119,28 @@
     }
   }
 
+  &_hollow {
+    background-color: $white;
+    border-color: $dark-blue;
+    color: $dark-blue;
+
+    object svg path {
+      fill: $blue;
+    }
+
+    &:hover {
+      background-color: $white;
+      border-color: $blue;
+      color: $dark-blue;
+    }
+
+    &:active {
+      background-color: $white;
+      border-color: $hard-blue;
+      color: $dark-blue;
+    }
+  }
+
   &_round {
     border-radius: 50%;
   }
@@ -133,6 +152,16 @@
     object {
       width: 26px;
       height: 33px;
+    }
+  }
+
+  &_up {
+    width: 48px;
+    height: 48px;
+
+    object {
+      width: 16px;
+      height: 18px;
     }
   }
 }
@@ -162,7 +191,6 @@
 //   background-color: $dark-blue;
 //   border-color: $dark-blue;
 
-
 //   &:hover {
 //     background-color: $blue;
 //     border-color: $blue;
@@ -175,9 +203,16 @@
 // }
 
 @media screen and (max-width: 1919px) {
-  .btn_login {
-    width: 42px;
-    height: 42px;
+  .btn {
+    &_login {
+      width: 42px;
+      height: 42px;
+    }
+
+    &_up {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
