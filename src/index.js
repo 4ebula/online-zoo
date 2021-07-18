@@ -33,4 +33,5 @@ class Page extends React.Component {
   }
 }
 
+// const app = ReactDOM.render(<div className='app'></div>)
 render(<Page />, document.body);

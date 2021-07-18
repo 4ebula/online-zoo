@@ -22,10 +22,7 @@ export class Header extends React.Component {
               </ul>
             </nav>
             <div className="login">
-              {/* <button className="btn btn-login">
-                <object data={require("../../assets/images/icon-login.svg")} type="image/svg+xml"></object>
-              </button> */}
-              <Button classes = {['btn_round', 'btn_login']}/>
+              <Button classes = {['filled', 'round', 'login']} iconName='user'/>
             </div>
             <div className="burger"><img src={require("../../assets/images/icons/icon-burger.svg")} alt=""/></div>
           </div>

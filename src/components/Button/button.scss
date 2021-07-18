@@ -18,6 +18,10 @@
   outline: none;
   cursor: pointer;
 
+  object {
+    cursor: pointer;
+  }
+
   &::-moz-focus-inner {
     border: none;
   }
@@ -39,6 +43,8 @@
       color: $white;
     }
   }
+
+  
 
   &__hollow {
     background-color: $white;
@@ -98,8 +104,36 @@
     }
   }
 
+  &_filled {
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+    color: $white;
+
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $active;
+      border-color: $active;
+      color: $white;
+    }
+  }
+
   &_round {
     border-radius: 50%;
+  }
+
+  &_login {
+    width: 52px;
+    height: 52px;
+
+    object {
+      width: 26px;
+      height: 33px;
+    }
   }
 }
 
@@ -123,29 +157,22 @@
   }
 }
 
-.btn_login {
-  position: relative;
-  width: 52px;
-  height: 52px;
-  background-color: $dark-blue;
-  border-color: $dark-blue;
+// .btn_login {
+//   position: relative;
+//   background-color: $dark-blue;
+//   border-color: $dark-blue;
 
-  object {
-    width: 26px;
-    height: 33px;
-    cursor: pointer;
-  }
 
-  &:hover {
-    background-color: $blue;
-    border-color: $blue;
-  }
+//   &:hover {
+//     background-color: $blue;
+//     border-color: $blue;
+//   }
 
-  &:active {
-    background-color: $active;
-    border-color: $active;
-  }
-}
+//   &:active {
+//     background-color: $active;
+//     border-color: $active;
+//   }
+// }
 
 @media screen and (max-width: 1919px) {
   .btn_login {
