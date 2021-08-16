@@ -226,6 +226,7 @@
   border-color: $white;
   color: $white;
   width: 286px;
+  height: 61px;
 
   &:hover {
     border-color: $hard-blue;
@@ -298,7 +299,10 @@
   }
 }
 
-.reviews-section .direction-buttons {
+.direction-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
   margin-top: 29px;
 
   button {
@@ -377,7 +381,7 @@
     }
   }
 
-  .reviews-section .direction-buttons {
+  .direction-buttons {
     margin-left: 7px;
     margin-top: 30px;
   }
@@ -446,7 +450,7 @@
     }
   }
 
-  .reviews-section .direction-buttons {
+  .direction-buttons {
     margin-left: -1px;
     margin-top: 30px;
   }
@@ -526,8 +530,13 @@
     }
   }
 
-  .reviews-section .direction-buttons {
+  .direction-buttons {
     margin-left: -1px;
     margin-top: 30px;
   }
+}
+
+.btn_direction {
+  width: 50px;
+  height: 50px;
 }

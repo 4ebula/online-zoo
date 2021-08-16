@@ -115,7 +115,7 @@
   }
 }
 
-.howto-info .btn__filled {
+.btn_howto {
   margin-top: 61px;
   width: 220px;
 }
@@ -154,15 +154,14 @@
       font-size: 16px;
       line-height: 25px;
     }
-
-    .btn__filled {
-      margin-top: 50px;
-      width: 212px;
-      height: 59px;
-    }
   }
 }
 
+.btn_howto {
+  margin-top: 50px;
+  width: 212px;
+  height: 59px;
+}
 @media screen and (max-width: 1199px) {
   .howto {
     margin-top: 64px;
@@ -211,13 +210,13 @@
       line-height: 25px;
       text-align: center;
     }
-
-    .btn__filled {
-      margin-top: 39px;
-      width: 212px;
-      height: 59px;
-    }
   }
+}
+
+.btn_howto {
+  margin-top: 39px;
+  width: 212px;
+  height: 59px;
 }
 
 @media screen and (max-width: 639px) {
@@ -269,12 +268,12 @@
       letter-spacing: -0.5px;
       text-align: center;
     }
-
-    .btn__filled {
-      margin-top: 39px;
-      margin-left: 6px;
-      width: 212px;
-      height: 60px;
-    }
   }
+}
+
+.btn_howto {
+  margin-top: 39px;
+  margin-left: 6px;
+  width: 212px;
+  height: 60px;
 }

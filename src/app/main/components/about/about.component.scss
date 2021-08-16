@@ -361,3 +361,28 @@
     }
   }
 }
+
+.btn {
+  width: 261px;
+  height: 61px;
+}
+
+@media screen and (max-width: 1919px) {
+  .btn {
+    width: 219px;
+    height: 51px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .btn {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}

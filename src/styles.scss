@@ -119,14 +119,6 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  // width: 261px;
-  // height: 61px;
-
-  // border: {
-  //   width: 2px;
-  //   style: solid;
-  //   radius: 5px;
-  // }
 
   @include typography1(18, 500, 21.33, "Rubik", $white);
 
@@ -237,26 +229,6 @@ body {
       border: 1px solid $active;
       background-color: $active;
     }
-  }
-}
-
-@media screen and (max-width: 1919px) {
-  .btn {
-    width: 219px;
-    height: 51px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .btn {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  .btn {
-    font-size: 14px;
-    letter-spacing: 1px;
   }
 }
 
