@@ -235,14 +235,15 @@
   }
 }
 
-.btn-up {
-  margin-left: 19px;
+.btn_up {
   width: 48px;
   height: 48px;
+  margin-left: 19px;
   background-color: $white;
-  border-color: #f0f0f0;
+  border: 2px solid #f0f0f0;
 
   &:hover {
+    border-width: 1px;
     background-color: $white;
     border-color: $blue;
 
@@ -252,6 +253,7 @@
   }
 
   &:active {
+    border-width: 1px;
     background-color: $white;
     border-color: $hard-blue;
 
@@ -276,7 +278,7 @@
     }
   }
 
-  .btn-up {
+  .btn_up {
     // margin-top: 68px;
     margin-left: 10px;
     width: 48px;

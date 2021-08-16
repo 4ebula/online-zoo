@@ -141,17 +141,9 @@ body {
     }
   }
 
-  &_round {
-    border-radius: 50%;
-  }
-
   &_hollow {
-    border: {
-      width: 2px;
-      style: solid;
-      color: $dark-blue;
-      radius: 5px;
-    }
+    border: 2px solid $dark-blue;
+    border-radius: 5px;
     background-color: inherit;
     color: $dark-blue;
 
@@ -168,67 +160,8 @@ body {
     }
   }
 
-  &__filled {
-    background-color: $dark-blue;
-    border-color: $dark-blue;
-    color: $white;
-
-    &:hover {
-      background-color: $blue;
-      border-color: $blue;
-      color: $white;
-    }
-
-    &:active {
-      background-color: $active;
-      border-color: $active;
-      color: $white;
-    }
-  }
-
-  &__hollow {
-    background-color: $white;
-    border-color: $dark-blue;
-    color: $dark-blue;
-
-    &:hover {
-      background-color: $white;
-      border-color: $blue;
-      color: $dark-blue;
-    }
-
-    &:active {
-      background-color: $white;
-      border-color: $hard-blue;
-      color: $dark-blue;
-    }
-  }
-
-  &-round {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 66px;
-    height: 66px;
+  &_round {
     border-radius: 50%;
-    border: 1px solid $dark-blue;
-    background-color: $dark-blue;
-    outline: none;
-
-    &::-moz-focus-inner {
-      border: none;
-    }
-
-    &:hover {
-      border: 1px solid $blue;
-      background-color: $blue;
-    }
-
-    &:active {
-      border: 1px solid $active;
-      background-color: $active;
-    }
   }
 }
 
