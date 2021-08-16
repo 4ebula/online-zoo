@@ -31,3 +31,38 @@ $gray: #747474;
   letter-spacing: $spacing;
   color: $color;
 }
+
+@mixin button-text($color, $hover, $active) {
+  height: 50px;
+  background-color: transparent;
+  border-color: transparent;
+  color: $color;
+
+  svg {
+    margin-left: 10px;
+
+    path {
+      fill: $color;
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+    border-color: $hover;
+    color: $hover;
+
+    svg > path {
+      fill: $hover;
+    }
+  }
+
+  &:active {
+    background-color: transparent;
+    border-color: $active;
+    color: $active;
+
+    svg > path {
+      fill: $active;
+    }
+  }
+}
