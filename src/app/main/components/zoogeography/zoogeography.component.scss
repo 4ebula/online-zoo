@@ -1,0 +1,594 @@
+@import "../../../../variables.scss";
+
+.wrapper {
+  width: 1800px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.wrapper-inner {
+  width: 1432px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.wrapper-inner_one-side {
+  width: 1616px;
+  margin-left: auto;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (max-width: 1919px) {
+  .wrapper {
+    width: 1120px;
+  }
+
+  .wrapper-inner {
+    width: 976.25px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .wrapper-inner_one-side {
+    width: 976.25px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .wrapper {
+    width: 600px;
+  }
+
+  .wrapper-inner {
+    width: 600px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .wrapper-inner_one-side {
+    width: 600px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .wrapper {
+    width: 300px;
+  }
+
+  .wrapper-inner {
+    width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .wrapper-inner_one-side {
+    width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.zoogeography {
+  margin-top: 50px;
+  padding-bottom: 91px;
+
+  .wrapper-inner_one-side {
+    width: 1616px;
+  }
+
+  h2 {
+    margin-top: 50px;
+  }
+}
+
+.zoogeography-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 346px;
+
+  h2 {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .zoogeography {
+    margin-top: 50px;
+    padding-bottom: 0px;
+
+    .wrapper-inner_one-side {
+      width: 976.25px;
+    }
+
+    h2 {
+      letter-spacing: 1.2px;
+    }
+  }
+
+  .zoogeography-container {
+    max-width: 292px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .zoogeography {
+    margin-top: 50px;
+    padding-bottom: 0px;
+
+    .wrapper-inner_one-side {
+      width: 100%;
+    }
+
+    h2 {
+      letter-spacing: 1.2px;
+      display: none;
+    }
+  }
+
+  .zoogeography-container {
+    max-width: 292px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .zoogeography {
+    margin-top: 30px;
+    padding-bottom: 0px;
+
+    .wrapper-inner_one-side {
+      width: 100%;
+    }
+
+    h2 {
+      letter-spacing: 1.2px;
+      display: none;
+    }
+  }
+
+  .zoogeography-container {
+    max-width: 292px;
+  }
+}
+
+.zoogeography-card__container {
+  margin-top: 63px;
+  height: 512px;
+  width: 344px;
+  position: relative;
+  overflow: hidden;
+
+  background: #fcfcfc;
+  box-shadow: 4px 12px 22px rgba(0, 0, 0, 0.06);
+}
+
+.zoogeography-card {
+  height: 512px;
+  position: absolute;
+  left: -500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fcfcfc;
+  transition: left 200ms;
+
+  h3 {
+    margin-top: 21px;
+  }
+
+  p {
+    margin-top: 19px;
+    text-align: center;
+    width: 80%;
+  }
+}
+.zoogeography-card__image {
+  height: 216px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-active {
+  left: 0;
+}
+.zoogeography-card .btn {
+  @include button-text($hard-blue, $blue, $active);
+  margin-top: 41px;
+}
+
+@media screen and (max-width: 1919px) {
+  .zoogeography-card__container {
+    margin-top: 59px;
+    height: 448px;
+    width: 292px;
+  }
+
+  .zoogeography-card {
+    height: 448px;
+    width: 292px;
+
+    h3 {
+      margin-top: 19px;
+    }
+
+    p {
+      margin-top: 17px;
+      width: 90%;
+    }
+  }
+
+  .zoogeography-card__image {
+    height: 195px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .zoogeography-card .btn {
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 28px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .zoogeography-card__container {
+    width: 250px;
+    height: 390px;
+    margin-top: 0px;
+    position: absolute;
+    top: 30px;
+    left: 175px;
+  }
+
+  .zoogeography-card {
+    width: 250px;
+    height: 390px;
+    z-index: 5;
+
+    h3 {
+      margin-top: 19px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 21px;
+      width: 90%;
+    }
+  }
+
+  .zoogeography-card__image {
+    height: 160px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .zoogeography-card .btn {
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 23px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .zoogeography-card__container {
+    width: 250px;
+    height: 374px;
+    margin-top: 0px;
+    position: absolute;
+    top: 30px;
+    left: 25px;
+  }
+
+  .zoogeography-card {
+    width: 250px;
+    height: 374px;
+    z-index: 5;
+
+    h3 {
+      margin-top: 21px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 15px;
+      width: 85%;
+    }
+  }
+
+  .zoogeography-card__image {
+    height: 160px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .zoogeography-card .btn {
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: 18px;
+    margin-left: 6px;
+  }
+}
+
+.zoogeography-map-container {
+  flex-grow: 1;
+  padding-left: 20px;
+  position: relative;
+}
+
+.zoogeography-map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  height: 720px;
+  background-image: url("../../../../assets/images1/world.svg");
+  background-repeat: no-repeat;
+}
+
+.zoogeography-map object {
+  position: absolute;
+  width: 69px;
+  height: 89px;
+
+  &:hover {
+    transform: translateY(-19px) scale(1.4);
+  }
+}
+
+.marker {
+  width: 69px;
+  height: 89px;
+}
+
+.marker-drop {
+  fill: $white;
+  //stroke: $white;
+  //stroke-width: 2px;
+}
+
+.marker-lines {
+  fill: $dark-blue;
+}
+
+.marker:hover {
+  cursor: pointer;
+
+  .marker-drop {
+    stroke: $light-blue;
+    stroke-width: 2px;
+  }
+}
+
+.marker-gorilla {
+  top: 339px;
+  left: 592px;
+}
+
+.marker-alligator {
+  top: 212px;
+  left: 275px;
+}
+
+.marker-eagle {
+  top: 197px;
+  left: 142px;
+}
+
+.marker-panda {
+  top: 199px;
+  left: 910px;
+}
+
+.marker-active {
+  transform: translateY(-19px) scale(1.4);
+  cursor: default;
+
+  .marker {
+    .marker-drop {
+      stroke: $light-blue;
+      stroke-width: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .zoogeography-map-container {
+    padding-left: 9px;
+    padding-top: 135px;
+  }
+
+  .zoogeography-map {
+    height: 100%;
+    width: 100%;
+    height: 546px;
+    background-size: contain;
+  }
+
+  .zoogeography-map object {
+    width: 39px;
+    height: 49px;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.4);
+    }
+  }
+
+  .marker {
+    width: 39px;
+    height: 49px;
+  }
+
+  .marker-drop {
+    display: block;
+    fill: $white;
+    stroke: $white;
+    stroke-width: 2px;
+  }
+
+  .marker-lines {
+    fill: $dark-blue;
+  }
+
+  .marker:hover {
+    cursor: pointer;
+
+    .marker-drop {
+      stroke: $light-blue;
+      stroke-width: 2px;
+    }
+  }
+
+  .marker-gorilla {
+    top: 170px;
+    left: 308px;
+  }
+
+  .marker-alligator {
+    top: 119px;
+    left: 148px;
+  }
+
+  .marker-eagle {
+    top: 110px;
+    left: 78px;
+  }
+
+  .marker-panda {
+    top: 109px;
+    left: 491px;
+  }
+
+  .marker-active {
+    transform: translateY(-10px) scale(1.4);
+    cursor: default;
+
+    .marker {
+      .marker-drop {
+        stroke: $light-blue;
+        stroke-width: 2px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .zoogeography-map-container {
+    padding-left: 0px;
+    padding-top: 350px;
+  }
+
+  .zoogeography-map {
+    height: 100%;
+    width: 100%;
+    height: 426px;
+    background-size: contain;
+  }
+
+  .zoogeography-map object {
+    width: 39px;
+    height: 49px;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.4);
+    }
+  }
+
+  .marker {
+    width: 39px;
+    height: 49px;
+  }
+
+  .marker-drop {
+    display: block;
+    fill: $white;
+    stroke: $white;
+    stroke-width: 2px;
+  }
+
+  .marker-lines {
+    fill: $dark-blue;
+  }
+
+  .marker:hover {
+    cursor: pointer;
+
+    .marker-drop {
+      stroke: $light-blue;
+      stroke-width: 2px;
+    }
+  }
+
+  .marker-gorilla {
+    top: 148px;
+    left: 272px;
+  }
+
+  .marker-alligator {
+    top: 100px;
+    left: 132px;
+  }
+
+  .marker-eagle {
+    top: 92px;
+    left: 66px;
+  }
+
+  .marker-panda {
+    top: 99px;
+    left: 443px;
+  }
+
+  .marker-active {
+    transform: translateY(-10px) scale(1.4);
+    cursor: default;
+  }
+
+  .zoos-panel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .zoogeography-map-container {
+    padding-left: 0px;
+    padding-top: 554px;
+  }
+
+  .zoogeography-map {
+    display: none;
+  }
+
+  // zoospanel
+}
+
+.hightligth {
+  .marker-drop path {
+    stroke: $light-blue;
+    stroke-width: 2px;
+  }
+}

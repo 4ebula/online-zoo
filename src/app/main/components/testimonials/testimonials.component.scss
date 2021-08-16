@@ -228,13 +228,13 @@
   width: 286px;
 
   &:hover {
-    border-color: $gray;
-    color: $gray;
+    border-color: $hard-blue;
+    color: $hard-blue;
   }
 
   &:active {
-    border-color: $active;
-    color: $active;
+    border-color: $white;
+    color: $white;
   }
 }
 
