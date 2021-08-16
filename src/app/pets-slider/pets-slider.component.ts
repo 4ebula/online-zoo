@@ -14,6 +14,8 @@ export class PetsSliderComponent implements AfterViewInit {
 
   slides: TSlides = slides;
 
+  style = { left: '0px', transitionDuration: '0ms' };
+
   setColumn = (index: number): number => {
     return Math.floor(index / 2) + 1;
   };
@@ -28,14 +30,19 @@ export class PetsSliderComponent implements AfterViewInit {
         const col = +e.nativeElement.getAttribute('column');
         const newCol = col === 1 ? 4 : col - 1;
         const slide = e.nativeElement;
-        slide.style.left = '-290px';
-        slide.style.transitionDuration = '500ms';
+        this.style.left = '-290px';
+        this.style.transitionDuration = '500ms';
         slide.setAttribute('column', newCol);
-        slide.ontransitionend = () => {
-          slide.style.transitionDuration = '0ms';
+        setTimeout(() => {
+          this.style.transitionDuration = '0ms';
           slide.style.gridColumn = newCol;
-          slide.style.left = '0px';
-        };
+          this.style.left = '0px';
+        }, 500);
+        // slide.ontransitionend = () => {
+        //   this.style.transitionDuration = '0ms';
+        //   slide.style.gridColumn = newCol;
+        //   this.style.left = '0px';
+        // };
       });
     }, 5000);
   }
