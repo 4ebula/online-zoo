@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  overflow-y: overlay;
+}
+
+body,
+section,
+aside,
+main,
+header,
+footer,
+button,
+div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}

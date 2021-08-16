@@ -1,0 +1,33 @@
+$white: #fcfcfc;
+$black: #0b0b0b;
+$blue: #0f0049;
+$dark-blue: #080029;
+$hard-blue: #3888ff;
+$widght-blue: #d9e9ff;
+$light-blue: #609fff;
+$active: #150068;
+$gray: #747474;
+
+@mixin typography1($size: 16, $weight: 400, $line: 32, $family: "Merriweather", $color: $dark-blue, $spacing: 0px) {
+  font: {
+    size: $size / 16 * 1rem;
+    weight: $weight;
+    family: $family, sans-serif;
+  }
+
+  line-height: $line / 16 * 1rem;
+  letter-spacing: $spacing;
+  color: $color;
+}
+
+@mixin typography($size: 16, $weight: 400, $line: 32, $color: $dark-blue, $family: "Merriweather", $spacing: 0px) {
+  font: {
+    size: $size / 16 * 1rem;
+    weight: $weight;
+    family: $family, sans-serif;
+  }
+
+  line-height: $line / 16 * 1rem;
+  letter-spacing: $spacing;
+  color: $color;
+}
