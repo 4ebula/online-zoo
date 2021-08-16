@@ -1,0 +1,4 @@
+<div class="slider-grid">
+  <app-slide *ngFor="let slide of slides; index as i" [slide]="slide" [attr.column]="this.setColumn(i)">
+  </app-slide>
+</div>
