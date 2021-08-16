@@ -7,10 +7,11 @@ import { AboutComponent } from './components/about/about.component';
 import { HowToComponent } from './components/how-to/how-to.component';
 import { FamousPetsComponent } from './components/famous-pets/famous-pets.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @NgModule({
-  declarations: [HeaderComponent, AsideComponent, FooterComponent, AboutComponent, HowToComponent, FamousPetsComponent, PaymentComponent],
+  declarations: [HeaderComponent, AsideComponent, FooterComponent, AboutComponent, HowToComponent, FamousPetsComponent, PaymentComponent, TestimonialsComponent],
   imports: [CommonModule],
-  exports: [HeaderComponent, AsideComponent, FooterComponent, AboutComponent, HowToComponent, FamousPetsComponent, PaymentComponent],
+  exports: [HeaderComponent, AsideComponent, FooterComponent, AboutComponent, HowToComponent, FamousPetsComponent, PaymentComponent, TestimonialsComponent],
 })
 export class MainModule {}
