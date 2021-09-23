@@ -1,28 +1,37 @@
 module.exports = {
   root: true,
+  ignorePatterns: [
+    '**/polyfills.ts',
+    '**/environments/*.*',
+    '**/main.ts',
+    '**/test.ts'
+  ],
   overrides: [
     {
       files: ["*.ts"],
       parserOptions: {
         project: [
-          "tsconfig.*?.json",
           "./**/tsconfig.json"
         ],
-        createDefaultProgram: true,
+        createDefaultProgram: true
       },
       extends: [
         "plugin:@angular-eslint/recommended",
-        // AirBnB Styleguide rules
+        'airbnb-base',
         'airbnb-typescript/base',
-        // Settings for Prettier
-        'plugin:prettier/recommended'
+        'plugin:prettier/recommended',
       ],
       rules: {
         "import/prefer-default-export": "off",
-      }
+        "no-console": ["warn", { allow: ["warn", "error"] }],
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "import/order": ["error", { "newlines-between": "ignore" },
+        ]
+      },
+      plugins: ['import']
     },
     {
-      files: ["*.component.html"],
+      files: ["*.component.html", '*.html'],
       extends: ["plugin:@angular-eslint/template/recommended"],
       rules: {
         "max-len": ["error", { "code": 140 }]

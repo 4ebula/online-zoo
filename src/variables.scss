@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $white: #fcfcfc;
 $black: #0b0b0b;
 $blue: #0f0049;
@@ -8,26 +10,27 @@ $light-blue: #609fff;
 $active: #150068;
 $gray: #747474;
 
+// DELETE AFTER
 @mixin typography1($size: 16, $weight: 400, $line: 32, $family: "Merriweather", $color: $dark-blue, $spacing: 0px) {
   font: {
-    size: $size / 16 * 1rem;
+    size: math.div($size, 16) * 1rem;
     weight: $weight;
     family: $family, sans-serif;
   }
 
-  line-height: $line / 16 * 1rem;
+  line-height: math.div($size, 16) * 1rem;
   letter-spacing: $spacing;
   color: $color;
 }
 
 @mixin typography($size: 16, $weight: 400, $line: 32, $color: $dark-blue, $family: "Merriweather", $spacing: 0px) {
   font: {
-    size: $size / 16 * 1rem;
+    size: math.div($size, 16) * 1rem;
     weight: $weight;
     family: $family, sans-serif;
   }
 
-  line-height: $line / 16 * 1rem;
+  line-height: math.div($size, 16) * 1rem;
   letter-spacing: $spacing;
   color: $color;
 }
@@ -67,7 +70,14 @@ $gray: #747474;
   }
 }
 
+// DELETE AFTER
 @mixin flexCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-centered {
   display: flex;
   justify-content: center;
   align-items: center;
