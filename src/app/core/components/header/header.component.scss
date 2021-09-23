@@ -1,7 +1,5 @@
 @import "../../../../variables.scss";
 
-@import "../../../../variables.scss";
-
 :host {
   position: relative;
   display: flex;
@@ -33,10 +31,6 @@
     &:active {
       color: $active;
     }
-  }
-
-  .logo img {
-    visibility: hidden;
   }
 }
 
@@ -83,14 +77,23 @@
   }
 }
 
-.header-main {
+.header {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 1120px;
   height: 100%;
+  margin: 0 auto;
+  // width: 100%;
   border: 2px solid #f0f0f0;
   background-color: #fcfcfc05;
+
+  // .wrapper {
+  //   height: 100%;
+  // width: 1800px;
+  // }
+
+  // HAVE MERGE HEADER-MAIN AND WRAPPER INTO HEADER
 
   nav {
     flex: 5 0 184px;
@@ -116,12 +119,22 @@
 }
 
 .logo-container {
+  @include flex-centered;
   flex: 0 0 184px;
   height: 100%;
 }
 
+.logo {
+  color: $black;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (max-width: 1919px) {
-  .header-main {
+  .header {
     .logo-container {
       flex: 0 0 143.25px;
     }
@@ -139,7 +152,7 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .header-main {
+  .header {
     border-color: transparent;
 
     nav {
@@ -160,7 +173,7 @@
 }
 
 @media screen and (max-width: 639px) {
-  .header-main {
+  .header {
     border-color: transparent;
 
     nav {
@@ -201,60 +214,54 @@
   }
 }
 
-.wrapper {
-  width: 1800px;
-  margin: 0 auto;
-  height: 100%;
-}
+// .wrapper-inner {
+//   width: 1432px;
+//   margin: 0 auto;
+//   display: flex;
+//   position: relative;
+// }
 
-.wrapper-inner {
-  width: 1432px;
-  margin: 0 auto;
-  display: flex;
-  position: relative;
-}
+// .wrapper-inner_one-side {
+//   width: 1616px;
+//   margin-left: auto;
+//   display: flex;
+//   position: relative;
+// }
 
-.wrapper-inner_one-side {
-  width: 1616px;
-  margin-left: auto;
-  display: flex;
-  position: relative;
-}
+// @media screen and (max-width: 1919px) {
+//   .wrapper {
+//     width: 1120px;
+//   }
 
-@media screen and (max-width: 1919px) {
-  .wrapper {
-    width: 1120px;
-  }
+//   .wrapper-inner {
+//     width: 976.25px;
+//     margin-left: auto;
+//     margin-right: 0;
+//   }
 
-  .wrapper-inner {
-    width: 976.25px;
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  .wrapper-inner_one-side {
-    width: 976.25px;
-    margin-left: auto;
-    margin-right: 0;
-  }
-}
+//   .wrapper-inner_one-side {
+//     width: 976.25px;
+//     margin-left: auto;
+//     margin-right: 0;
+//   }
+// }
 
 @media screen and (max-width: 1199px) {
   .wrapper {
     width: 600px;
   }
 
-  .wrapper-inner {
-    width: 600px;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  // .wrapper-inner {
+  //   width: 600px;
+  //   margin-left: 0;
+  //   margin-right: 0;
+  // }
 
-  .wrapper-inner_one-side {
-    width: 600px;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  // .wrapper-inner_one-side {
+  //   width: 600px;
+  //   margin-left: 0;
+  //   margin-right: 0;
+  // }
 }
 
 @media screen and (max-width: 639px) {
@@ -262,26 +269,25 @@
     width: 300px;
   }
 
-  .wrapper-inner {
-    width: 300px;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  // .wrapper-inner {
+  //   width: 300px;
+  //   margin-left: 0;
+  //   margin-right: 0;
+  // }
 
-  .wrapper-inner_one-side {
-    width: 300px;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  // .wrapper-inner_one-side {
+  //   width: 300px;
+  //   margin-left: 0;
+  //   margin-right: 0;
+  // }
 }
 
 .btn_login {
   width: 52px;
   height: 52px;
-  background: {
-    image: url("../../../../assets/icons/user_icon.png");
-    repeat: no-repeat;
-    position: center 50%;
+
+  & > * {
+    transform: scale(0.65);
   }
 }
 
@@ -298,13 +304,6 @@
     width: 50px;
     height: 50px;
     border-bottom-color: transparent;
-  }
-
-  .logo-container .logo img {
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    margin: 0;
   }
 
   .btn_login {
