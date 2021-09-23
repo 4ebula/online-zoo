@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+:host {
+  width: 100vw;
+
+  div:first-child {
+    position: relative;
+    width: 100%;
+  }
+}

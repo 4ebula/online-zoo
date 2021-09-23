@@ -6,6 +6,8 @@
   align-items: center;
   width: 100%;
   height: 90px;
+  padding: 0 3.5%;
+  box-sizing: border-box;
   border-bottom: none;
 
   nav ul {
@@ -34,56 +36,13 @@
   }
 }
 
-@media screen and (max-width: 1919px) {
-  :host {
-    position: relative;
-    height: 70px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  :host {
-    height: 89px;
-    position: sticky;
-    top: -1px;
-    background-color: $white;
-    z-index: 10;
-    border-bottom: 2px solid #f0f0f0;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  :host {
-    height: 62px;
-  }
-}
-
-:host .active {
-  transform: scale(1.1);
-
-  a {
-    color: $hard-blue;
-    cursor: default;
-
-    &:hover {
-      color: $hard-blue;
-      cursor: default;
-    }
-
-    &:active {
-      color: $hard-blue;
-      cursor: default;
-    }
-  }
-}
-
 .header {
   position: relative;
   display: flex;
   align-items: center;
-  width: 1120px;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  // margin: 0 auto;
   // width: 100%;
   border: 2px solid #f0f0f0;
   background-color: #fcfcfc05;
@@ -99,6 +58,49 @@
     flex: 5 0 184px;
     margin-right: auto;
     max-width: 800px;
+  }
+
+  // @media screen and (max-width: 1919px) {
+  //   :host {
+  //     position: relative;
+  //     height: 70px;
+  //   }
+  // }
+
+  // @media screen and (max-width: 1199px) {
+  //   :host {
+  //     height: 89px;
+  //     position: sticky;
+  //     top: -1px;
+  //     background-color: $white;
+  //     z-index: 10;
+  //     border-bottom: 2px solid #f0f0f0;
+  //   }
+  // }
+
+  // @media screen and (max-width: 639px) {
+  //   :host {
+  //     height: 62px;
+  //   }
+  // }
+
+  :host .active {
+    transform: scale(1.1);
+
+    a {
+      color: $hard-blue;
+      cursor: default;
+
+      &:hover {
+        color: $hard-blue;
+        cursor: default;
+      }
+
+      &:active {
+        color: $hard-blue;
+        cursor: default;
+      }
+    }
   }
 
   .login {
